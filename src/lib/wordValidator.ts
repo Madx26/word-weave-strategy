@@ -1,7 +1,35 @@
-// Common English words dictionary (simplified for demo)
-// In production, you'd use a comprehensive dictionary API
+// Comprehensive English words dictionary
+// Includes common 2-9 letter words
 const VALID_WORDS = new Set([
-  "cat", "dog", "bat", "rat", "hat", "mat", "sat", "fat", "pat",
+  // 2-letter words
+  "an", "as", "at", "be", "by", "do", "go", "he", "hi", "if", "in", "is", "it", "me", "my", "no", "of", "on", "or", "ox", "so", "to", "up", "us", "we",
+  
+  // 3-letter words - animals, common nouns, verbs
+  "ant", "ape", "arc", "ark", "arm", "art", "ash", "ask", "ate", "axe",
+  "bad", "bag", "ban", "bar", "bat", "bay", "bed", "bee", "bet", "bid", "big", "bin", "bit", "boa", "bog", "box", "boy", "bud", "bug", "bun", "bus", "but", "buy",
+  "cab", "cam", "can", "cap", "car", "cat", "cob", "cod", "cog", "cop", "cot", "cow", "cox", "coy", "cry", "cub", "cud", "cue", "cup", "cur", "cut",
+  "dab", "dad", "dam", "day", "den", "dew", "did", "die", "dig", "dim", "din", "dip", "doc", "doe", "dog", "don", "dot", "dry", "dub", "dud", "due", "dug", "dun", "duo", "dye",
+  "ear", "eat", "ebb", "eel", "egg", "ego", "elf", "elk", "elm", "emu", "end", "era", "eve", "ewe", "eye",
+  "fad", "fan", "far", "fat", "fax", "fed", "fee", "fen", "few", "fib", "fig", "fin", "fir", "fit", "fix", "flu", "fly", "foe", "fog", "for", "fox", "fry", "fun", "fur",
+  "gab", "gag", "gap", "gas", "gay", "gel", "gem", "get", "gig", "gin", "gnu", "god", "got", "gum", "gun", "gut", "guy", "gym",
+  "had", "hag", "ham", "has", "hat", "hay", "hem", "hen", "her", "hew", "hex", "hey", "hid", "him", "hip", "his", "hit", "hob", "hod", "hoe", "hog", "hop", "hot", "how", "hub", "hue", "hug", "hum", "hut",
+  "ice", "icy", "ill", "imp", "ink", "inn", "ion", "ire", "irk", "ivy",
+  "jab", "jag", "jam", "jar", "jaw", "jay", "jet", "jig", "job", "jog", "jot", "joy", "jug",
+  "keg", "ken", "key", "kid", "kin", "kit",
+  "lab", "lac", "lad", "lag", "lam", "lap", "law", "lax", "lay", "lea", "led", "leg", "let", "lid", "lie", "lip", "lit", "log", "lot", "low", "lug",
+  "mad", "mag", "man", "map", "mar", "mat", "maw", "may", "men", "met", "mid", "mix", "mob", "mod", "mom", "mop", "mow", "mud", "mug", "mum",
+  "nab", "nag", "nap", "nay", "net", "new", "nib", "nil", "nip", "nit", "nix", "nod", "nor", "not", "now", "nub", "nun", "nut",
+  "oak", "oar", "oat", "odd", "ode", "off", "oft", "oil", "old", "one", "opt", "orb", "ore", "our", "out", "owe", "owl", "own",
+  "pad", "pal", "pan", "pap", "par", "pat", "paw", "pax", "pay", "pea", "peg", "pen", "pep", "per", "pet", "pew", "pie", "pig", "pin", "pit", "ply", "pod", "pop", "pot", "pow", "pox", "pry", "pub", "pug", "pun", "pup", "pus", "put",
+  "qua",
+  "rad", "rag", "ram", "ran", "rap", "rat", "raw", "ray", "red", "ref", "rep", "rev", "rib", "rid", "rig", "rim", "rip", "rob", "rod", "roe", "rot", "row", "rub", "rug", "rum", "run", "rut", "rye",
+  "sac", "sad", "sag", "sap", "sat", "saw", "sax", "say", "sea", "see", "set", "sew", "sex", "she", "shy", "sin", "sip", "sir", "sis", "sit", "six", "ski", "sky", "sly", "sob", "sod", "son", "sop", "sot", "sow", "sox", "soy", "spa", "spy", "sty", "sub", "sue", "sum", "sun", "sup",
+  "tab", "tad", "tag", "tam", "tan", "tap", "tar", "tat", "tax", "tea", "tee", "ten", "the", "thy", "tic", "tie", "tin", "tip", "tit", "toe", "ton", "too", "top", "tor", "tot", "tow", "toy", "try", "tub", "tug", "tun", "tux", "two",
+  "ugh", "ump", "urn", "use",
+  "van", "vat", "vet", "vex", "via", "vie", "vim", "vow",
+  "wad", "wag", "wan", "war", "was", "wax", "way", "web", "wed", "wee", "wet", "who", "why", "wig", "win", "wit", "woe", "wok", "won", "woo", "wow",
+  "yak", "yam", "yap", "yaw", "yea", "yen", "yes", "yet", "yew", "yin", "yip", "you", "yow",
+  "zap", "zen", "zip", "zit", "zoo",
   "cats", "dogs", "bats", "rats", "hats", "mats",
   "the", "and", "for", "are", "but", "not", "you", "all", "can", "her", "was", "one", "our", "out", "day",
   "go", "me", "he", "we", "be", "to", "do", "no", "so", "up", "at", "on", "in", "is", "it", "of", "or", "as",
