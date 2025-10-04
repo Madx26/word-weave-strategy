@@ -34,11 +34,14 @@ const Game = () => {
   const checkForNewWords = (newGrid: string[][]) => {
     const foundWords = findWords(newGrid);
     const newWords: Word[] = [];
+    const processedWords = new Set<string>();
     
     foundWords.forEach(word => {
-      const wordExists = wordsFound.some(w => w.word.toLowerCase() === word.toLowerCase());
+      const wordLower = word.toLowerCase();
+      const wordExists = wordsFound.some(w => w.word.toLowerCase() === wordLower);
+      const alreadyProcessed = processedWords.has(wordLower);
       
-      if (!wordExists && validateWord(word)) {
+      if (!wordExists && !alreadyProcessed && validateWord(word)) {
         const score = calculateScore(word.length);
         if (score > 0) {
           newWords.push({
@@ -46,6 +49,7 @@ const Game = () => {
             score,
             player: currentPlayer,
           });
+          processedWords.add(wordLower);
         }
       }
     });
